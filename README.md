@@ -5,7 +5,7 @@ Amortizationk is an app for calculating the Amortization schedule to the user wh
 
 The app is structured as follows
 
-/src/main/Executor.java - The Main class
+The Main class is /src/main/Executor.java
 
 Domain object is present in
 /src/main/domain
