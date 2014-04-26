@@ -16,7 +16,6 @@ public class AmortizationHelper {
     private double apr = 0d;
     private int initialTermMonths = 0;
 
-    private final double monthlyInterestDivisor = 12d * 100d;
     private double monthlyInterest = 0d;
     private long monthlyPaymentAmount = 0;	// in cents
 
@@ -62,15 +61,15 @@ public class AmortizationHelper {
         return ((range[0] <= years) && (years <= range[1]));
     }
 
-    public static final double[] getBorrowAmountRange() {
+    public static double[] getBorrowAmountRange() {
         return borrowAmountRange;
     }
 
-    public static final double[] getAPRRange() {
+    public static double[] getAPRRange() {
         return aprRange;
     }
 
-    public static final int[] getTermRange() {
+    public static int[] getTermRange() {
         return termRange;
     }
 
@@ -87,6 +86,7 @@ public class AmortizationHelper {
     public long calculateMonthlyPayment() {
 
         // calculate J
+        double monthlyInterestDivisor = 12d * 100d;
         monthlyInterest = apr / monthlyInterestDivisor;
 
         // this is 1 / (1 + J)

@@ -28,8 +28,7 @@ public class AmortizationUtil {
             print(userPrompt);
             line = bufferedReader.readLine();
         }
-        line.trim();
-        return line;
+        return line.trim();
     }
 
     public static void print(String s) {
